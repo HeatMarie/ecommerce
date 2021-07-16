@@ -6,9 +6,9 @@ Just workin' on the back end.
 
 ![GitHub User's stars](https://img.shields.io/github/stars/HeatMarie?color=%20%20%23c0640fb4&logo=github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
 
-![GitHub top language](https://img.shields.io/github/languages/top/HeatMarie/employeeTracker?color=%23c0640fb4&logo=github&logoColor=%23c0640fb4&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/HeatMarie/ecommerce?color=%23c0640fb4&logo=github&logoColor=%23c0640fb4&style=for-the-badge)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/HeatMarie/employeeTracker?color=%23c0640fb4&logo=github&logoColor=%20%23c0640fb4&style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/HeatMarie/ecommerce?color=%23c0640fb4&logo=github&logoColor=%20%23c0640fb4&style=for-the-badge)
 
   ## Table of Contents
   * [The Assignment](##Assignment)
@@ -24,10 +24,7 @@ Just workin' on the back end.
 
 #### Task
 
-- Build a command-line application that allows the user to: 
-    - add departments, roles, employees
-    - view departments, roles, and employees
-    - update employee roles 
+
 
 ## Installation
 
@@ -38,25 +35,24 @@ Just workin' on the back end.
 4. Clone it baby! 
 5. Open the app up in the code editor
 6. Use the terminal, node and npm to install all the needed things.
-7. Inside the terminal type "node index.js" or "npm start"
-8. Work the magic and answer the questions
+8. Type "node seeds" into the termrinal
+7. Inside the terminal type "npm start"
+
 
 ## The Results
 
-![Gif Demo](images/teamtrackergiffy.gif)
+![Gif Demo](images/ecommercegiffy.gif)
 
 
 
 ## Link to Demo 
 
-https://drive.google.com/file/d/1yRPs1rFaUmoGoSWxJxiaJ5I8UByBoyZn/view?usp=sharing
+https://drive.google.com/file/d/1h42ud48cUuht1klOOkbJ45OjorQpoV7W/view?usp=sharing
 
 
 ## Comments 
 
-This is the start of a Content Mangement System. This assignment uses node.js, and MySQL to manage a company's employee's. Again, here is an assignment, that you think is simple enough. For the most part MySQL worked well with me. The most complicating thing was getting the id for the role and department from their names. Yet, it was accomplished. 
 
-In futures apps more will be added including: managers, deleting departments, roles, and employees, utilizing budget of the department. 
 
 
 ## Technologies
@@ -64,12 +60,11 @@ In futures apps more will be added including: managers, deleting departments, ro
 - MySQL
 - Node.js
 - npm
-    - inquirer
-    - Console.table
-    - MySQL
+    - express
+    - sequelize
+    - MySQL2
     - dotenv
-- CSS
-- HTML
+    - insomnia
 
 
 ## Contact Information 
