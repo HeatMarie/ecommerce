@@ -53,12 +53,26 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
-    if (!tagyData){
-      res.status(404).json({ message: 'No tag found with that id!' });
-      return;
+    let tagProducts = await ProductTag.findAll({ where: {tag_id: req.params.id } });
+    if (req.body.productIds) {
+      const tagProductIds = tagProducts.map(({ product_id }) => product_id);
+      const newTagProducts = req.body.productIds.filter((product_id) => !tagProductIds.includes(product_id)).map((product_id) => {
+        return{
+          tag_id: req.params.id,
+          product_id,
+        }
+      });
+      const tagProductsToRemove = tagProducts.filter(({ product_id }) => !req.body.productIds.includes(product_id)).map(({ id }) => id);
+
+      const updatedTagProducts = await Promise.all([ ProductTag.destroy({ where: {id: tagProductsToRemove} }),
+      ProductTag.bulkCreate(newTagProducts),
+    ])
+    res.status(200).json(updatedTagProducts)
+    } else {
+      res.status(200).json(tagData);
     }
-    res.status(200).json(tagData);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
